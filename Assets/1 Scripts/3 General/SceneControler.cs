@@ -21,10 +21,17 @@ public class SceneControler : MonoBehaviour
     } 
 }
     
-    public void CargarEscena(string escena) 
+    public void CargarEscena(int escena) 
     {
         SceneManager.LoadScene(escena);
     }
 
-    public void ExitGame() => Application.Quit();
+    public void ExitGame()
+    {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying =false;
+        #endif
+        Application.Quit();
+    }
+
 }
