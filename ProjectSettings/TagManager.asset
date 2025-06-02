@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - bullet
+  - franco
+  - escopeta
+  - "ca\xF1on"
   layers:
   - Default
   - TransparentFX

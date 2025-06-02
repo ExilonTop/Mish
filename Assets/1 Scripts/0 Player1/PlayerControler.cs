@@ -4,11 +4,10 @@ using UnityEngine;
 public class PlayerControler : MonoBehaviour
 {
     
-    public int hp=3;
-    public int escudo=10;
-    public int player;
+    public float hp=3;
+    public float player;
     public float velmov;
-    private float velrot;
+    public float velrot;
 
     void Update()
     {
@@ -16,13 +15,16 @@ public class PlayerControler : MonoBehaviour
         Oruga();
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    public void tomarDaño(float daño)
     {
-        if(collision.CompareTag("bullet"))
-        {
-            escudo--; if(escudo==0)hp--;
-        }
+        hp -= daño;
+        if (hp == 0) Morir();    }
+
+    public void Morir()
+    {
+        Destroy(this.gameObject);
     }
+
     public void Oruga()
     {
         float y =Input.GetAxis("Vertical"+ player.ToString())*Time.deltaTime;
@@ -36,11 +38,4 @@ public class PlayerControler : MonoBehaviour
         rotation.eulerAngles=new Vector3(0,0,-1*x*velrot + rotation.eulerAngles.z);
         transform.localRotation = rotation;
     }
-        /*Action funcion = () =>{
-            float y =Input.GetAxis("Vertical"+ player.ToString())*Time.deltaTime;
-            Vector3 posicion = transform.position;
-            transform.localPosition += transform.up*velmov*y; 
-        };
-        funcion.Invoke();
-        */
 }
