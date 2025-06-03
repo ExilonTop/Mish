@@ -8,6 +8,7 @@ TagManager:
   - franco
   - escopeta
   - "ca\xF1on"
+  - laser
   layers:
   - Default
   - TransparentFX

@@ -3,7 +3,7 @@ using UnityEngine;
 public class Bala : MonoBehaviour
 {
     public float velocidad;
-    public float daño;
+    public float daÃ±o;
 
     private void Update()
     {
@@ -14,7 +14,7 @@ public class Bala : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerControler>().tomarDaño(daño);
+            collision.GetComponent<PlayerControler>().tomarDaÃ±o(daÃ±o);
             Destroy(gameObject);
         }
     }

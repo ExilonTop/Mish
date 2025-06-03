@@ -15,9 +15,9 @@ public class PlayerControler : MonoBehaviour
         Oruga();
     }
 
-    public void tomarDaño(float daño)
+    public void tomarDaÃ±o(float daÃ±o)
     {
-        hp -= daño;
+        hp -= daÃ±o;
         if (hp == 0) Morir();    }
 
     public void Morir()
