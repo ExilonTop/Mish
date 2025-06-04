@@ -2,14 +2,22 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public enum WeaponType{
+public enum WeaponType
+{
     None,
     Weapon1,
     Weapon2
 }
+
 public class Disparar : MonoBehaviour
 {
     public float player;
+    public bool canDispararIzq = true;
+    public bool canDispararDer = true;
+    public float delayIzq = 0;
+    private float timerizq = 0f;
+    public float delayDer = 0;
+    private float timerDer = 0f;
 
     [Header("ArmasIzq")]
     public WeaponType currentWeaponIzq;
@@ -23,31 +31,74 @@ public class Disparar : MonoBehaviour
 
     private void Update()
     {
-        atacar();
+        if (canDispararIzq)
+        {
+            atacarIzq();
+        }
+        else
+        {
+            if (timerizq >= delayIzq)
+            {
+                //Hacemos algo
+                canDispararIzq = true;
+                timerizq = 0f;
+            }
+            else
+            {
+                //echa a andar el reloj
+                timerizq += Time.deltaTime;
+            }
+        }
+        if (canDispararDer)
+        {
+            atacarDer();
+        }
+        else
+        {
+            if (timerDer >= delayDer)
+            {
+                //Hacemos algo
+                canDispararDer = true;
+                timerDer = 0f;
+            }
+            else
+            {
+                //echa a andar el reloj
+                timerDer += Time.deltaTime;
+            }
+        }
     }
-    private void atacar()
+    private void atacarIzq()
     {
         if (player == 1 && Input.GetButtonDown("FireQ"))
         {
             //DispararIzq();
             DispararGeneric(currentWeaponIzq, armasIzq, armaizq);
         }
-        if (player == 1 && Input.GetButtonDown("FireE"))
-        {
-            //DispararDer();
-            DispararGeneric(currentWeaponDer, armasDer, armader);
-        }
+
 
         if (player == 2 && Input.GetButtonDown("Fire1"))
         {
             //DispararIzq();
             DispararGeneric(currentWeaponIzq, armasIzq, armaizq);
         }
+        canDispararIzq = true;
+        
+    }
+
+    private void atacarDer()
+    {
+        if (player == 1 && Input.GetButtonDown("FireE"))
+        {
+            //DispararDer();
+            DispararGeneric(currentWeaponDer, armasDer, armader);
+        }
         if (player == 2 && Input.GetButtonDown("Fire2"))
         {
             //DispararDer();
             DispararGeneric(currentWeaponDer, armasDer, armader);
         }
+        canDispararDer = true;
     }
     /*public void DispararIzq()
     {
@@ -81,7 +132,7 @@ public class Disparar : MonoBehaviour
 
     public void DispararGeneric(WeaponType brazo, List<GameObject> balas, Transform spawnPoint)
     {
-        switch (brazo) //
+        switch (brazo)
         {
             case WeaponType.None:
                 break;

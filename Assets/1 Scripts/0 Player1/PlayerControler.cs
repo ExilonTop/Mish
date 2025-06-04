@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerControler : MonoBehaviour
 {
     
-    public float hp=3;
+    public float hp=10;
     public float player;
     public float velmov;
     public float velrot;
