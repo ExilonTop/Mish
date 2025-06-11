@@ -19,11 +19,11 @@ public class Disparar : MonoBehaviour
     [Header("ArmasIzq")]
     public WeaponType currentWeaponIzq;
     public Transform armaizq;
-    public List<GameObject> armasIzq = new List<GameObject>();
+    public List<Bala> armasIzq = new List<Bala>();
     [Header("ArmaDer")]
     public WeaponType currentWeaponDer;
     public Transform armader;
-    public List<GameObject> armasDer = new List<GameObject>();
+    public List<Bala> armasDer = new List<Bala>();
     private void Update()
     {
         if (canDispararIzq==true)
@@ -65,13 +65,13 @@ public class Disparar : MonoBehaviour
     }
     private void atacarIzq()
     {
-        if (player == 1 && Input.GetButtonDown("FireQ"))
+        if (player == 1 && Input.GetButton("FireQ"))
         {
             //DispararIzq();
             DispararGeneric(currentWeaponIzq, armasIzq, armaizq);
             canDispararIzq = false;
         }
-        if (player == 2 && Input.GetButtonDown("Fire1"))
+        if (player == 2 && Input.GetButton("Fire1"))
         {
             //DispararIzq();
             DispararGeneric(currentWeaponIzq, armasIzq, armaizq);
@@ -82,14 +82,14 @@ public class Disparar : MonoBehaviour
     }
     private void atacarDer()
     {
-        if (player == 1 && Input.GetButtonDown("FireE"))
+        if (player == 1 && Input.GetButton("FireE"))
         {
             //DispararDer();
             DispararGeneric(currentWeaponDer, armasDer, armader);
             canDispararDer = false;
 
         }
-        if (player == 2 && Input.GetButtonDown("Fire2"))
+        if (player == 2 && Input.GetButton("Fire2"))
         {
             //DispararDer();
             DispararGeneric(currentWeaponDer, armasDer, armader);
@@ -125,17 +125,19 @@ public class Disparar : MonoBehaviour
                 break;
         }
     }*/
-    public void DispararGeneric(WeaponType brazo, List<GameObject> balas, Transform spawnPoint)
+    public void DispararGeneric(WeaponType brazo, List<Bala> balas, Transform spawnPoint)
     {
         switch (brazo)
         {
             case WeaponType.None:
                 break;
             case WeaponType.Weapon1:
-                Instantiate(balas[0], spawnPoint.position, spawnPoint.rotation);
+                Bala bala = Instantiate(balas[0], spawnPoint.position, spawnPoint.rotation);
+                bala.Shoot();
                 break;
             case WeaponType.Weapon2:
-                Instantiate(balas[1], spawnPoint.position, spawnPoint.rotation);
+                Bala bala2 = Instantiate(balas[1], spawnPoint.position, spawnPoint.rotation);
+                bala2.Shoot();
                 break;
         }
     }

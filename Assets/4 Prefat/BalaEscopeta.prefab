@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4617468630992435546}
   - component: {fileID: 8783522907935325196}
   - component: {fileID: 6329659406357860088}
-  - component: {fileID: 8791562162806842874}
+  - component: {fileID: -1515962145891831429}
   m_Layer: 0
   m_Name: BalaEscopeta
   m_TagString: bullet
@@ -126,7 +126,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
---- !u!114 &8791562162806842874
+--- !u!114 &-1515962145891831429
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,8 +135,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4153693134257583770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 284942ae2167fa8438de18752eaa57a6, type: 3}
+  m_Script: {fileID: 11500000, guid: bf6de606e80450a4b8a330c1e14fe073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 6
-  "da\xF1o": 2
+  "da\xF1o": 25
+  velocidad: 6.5
+  timeLife: 0
+  timeDead: 0.5

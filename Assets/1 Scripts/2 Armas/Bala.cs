@@ -3,10 +3,11 @@ public class Bala : MonoBehaviour
 {
     public float daño;
     public float velocidad;
-    public float timeLife;   
+    public float timeLife;
+    public float timeDead;
     private void Update()
     {
-        transform.Translate(Vector2.up * velocidad * Time.deltaTime);
+        Move();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,4 +17,19 @@ public class Bala : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void Move()
+    {
+        transform.Translate(Vector2.up * velocidad * Time.deltaTime);
+        timeLife += Time.deltaTime;
+        if (timeLife >= timeDead)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public virtual void Shoot()
+    {
+        Debug.Log("Soy una bala");
+    }
+
 }

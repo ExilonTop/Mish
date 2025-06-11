@@ -14,11 +14,11 @@ public class PlayerControler : MonoBehaviour
     public void tomarDaño(float daño)
     {
         hp -= daño;
-        if (hp == 0) Morir();
+        if (hp <= 0) Morir();
     }
     public void Morir()
     {
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
     public void Oruga()
     {
