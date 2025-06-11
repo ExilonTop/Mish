@@ -2206,10 +2206,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  canDispararIzq: 1
-  canDispararDer: 1
+  canDispararIzq: 0
+  canDispararDer: 0
   delayIzq: 0
+  timerIzq: 0
   delayDer: 0
+  timerDer: 0
   currentWeaponIzq: 0
   armaizq: {fileID: 1776393112}
   armasIzq:
@@ -2236,7 +2238,7 @@ MonoBehaviour:
   - nombre: laser
     type: 1
     isLeft: 1
-    delay: 3
+    delay: 0.1
   - nombre: escopeta
     type: 2
     isLeft: 1
@@ -2244,11 +2246,11 @@ MonoBehaviour:
   - nombre: "ca\xF1on"
     type: 1
     isLeft: 0
-    delay: 2
+    delay: 0.5
   - nombre: franco
     type: 2
     isLeft: 0
-    delay: 5
+    delay: 1.5
   brazosIzq:
   - nombre: laser
     obj: {fileID: 736039374}
