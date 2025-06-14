@@ -76,9 +76,7 @@ public class Disparar : MonoBehaviour
             //DispararIzq();
             DispararGeneric(currentWeaponIzq, armasIzq, armaizq);
             canDispararIzq = false;
-
         }
-        
     }
     private void atacarDer()
     {
@@ -87,14 +85,12 @@ public class Disparar : MonoBehaviour
             //DispararDer();
             DispararGeneric(currentWeaponDer, armasDer, armader);
             canDispararDer = false;
-
         }
         if (player == 2 && Input.GetButton("Fire2"))
         {
             //DispararDer();
             DispararGeneric(currentWeaponDer, armasDer, armader);
             canDispararDer = false;
-
         }
     }
     /*public void DispararIzq()

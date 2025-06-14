@@ -26,10 +26,8 @@ public class Bala : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     public virtual void Shoot()
     {
-        Debug.Log("Soy una bala");
+        
     }
-
 }
