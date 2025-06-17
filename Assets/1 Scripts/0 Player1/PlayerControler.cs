@@ -25,8 +25,8 @@ public class PlayerControler : MonoBehaviour
     }
     public void Morir()
     {
-        if(player==1){ganador.GetComponent<Pausa>().quienGano();}
-        if(player==2){ganador.GetComponent<Pausa>().quienGano2();}
+        if(player==1){ganador.GetComponent<Pausa>().quienGano2();}
+        if(player==2){ganador.GetComponent<Pausa>().quienGano();}
     }
     public void Oruga()
     {
