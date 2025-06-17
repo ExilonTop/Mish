@@ -1,4 +1,5 @@
 using System;
+using UnityEditor.PackageManager;
 using UnityEngine;
 public class PlayerControler : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class PlayerControler : MonoBehaviour
     public float player;
     public float velmov;
     public float velrot;
+    public GameObject ganador;
     void Update()
     {
         Mira();
@@ -23,7 +25,8 @@ public class PlayerControler : MonoBehaviour
     }
     public void Morir()
     {
-        Destroy(gameObject);
+        if(player==1){ganador.GetComponent<Pausa>().quienGano();}
+        if(player==2){ganador.GetComponent<Pausa>().quienGano2();}
     }
     public void Oruga()
     {
