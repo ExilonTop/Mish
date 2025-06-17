@@ -5,10 +5,14 @@ public class Botiquin : MonoBehaviour
     public float vida;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        PlayerControler jugador = collision.GetComponent<PlayerControler>();
+        if (jugador!=null)
         {
-            collision.GetComponent<PlayerControler>().tomarVida(vida);
-            Destroy(gameObject);
+            if (jugador.hp < jugador.hpMax)
+            {
+                jugador.tomarVida(vida);
+                Destroy(gameObject);
+            }
         }
     }
 }

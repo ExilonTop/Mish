@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3151862249101789399}
   m_Layer: 0
   m_Name: EscopetaXD
-  m_TagString: Untagged
+  m_TagString: escopeta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

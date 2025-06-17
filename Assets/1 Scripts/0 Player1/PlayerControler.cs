@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerControler : MonoBehaviour
 {
     public float hp=50;
+    public float hpMax=50;
     public float player;
     public float velmov;
     public float velrot;
@@ -18,10 +19,7 @@ public class PlayerControler : MonoBehaviour
     }
     public void tomarVida(float vida)
     {
-        if (hp <= 40)
-        {
-            hp += vida;
-        }
+        hp = Mathf.Min(hp + vida, hpMax);
     }
     public void Morir()
     {
