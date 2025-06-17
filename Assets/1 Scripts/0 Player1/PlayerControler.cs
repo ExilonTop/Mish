@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 public class PlayerControler : MonoBehaviour
 {
-    public float hp=10;
+    public float hp=50;
     public float player;
     public float velmov;
     public float velrot;
@@ -15,6 +15,13 @@ public class PlayerControler : MonoBehaviour
     {
         hp -= daño;
         if (hp <= 0) Morir();
+    }
+    public void tomarVida(float vida)
+    {
+        if (hp <= 40)
+        {
+            hp += vida;
+        }
     }
     public void Morir()
     {
