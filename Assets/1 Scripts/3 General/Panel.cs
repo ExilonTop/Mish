@@ -4,10 +4,8 @@ using UnityEngine;
 public class Panel : MonoBehaviour
 {
     public string theName;
-
     CanvasGroup canvasGroup;
     public float timeTransition;
-
     void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();

@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb99ce593de2794596ba2d5d9a3cb98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "da\xF1o": 0.1
+  "da\xF1o": 1
   velocidad: 8
   timeLife: 0
   timeDead: 0.3

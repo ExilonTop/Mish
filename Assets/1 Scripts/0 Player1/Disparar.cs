@@ -26,7 +26,13 @@ public class Disparar : MonoBehaviour
     public List<Bala> armasDer = new List<Bala>();
     private void Update()
     {
-        if (canDispararIzq==true)
+        if (Time.timeScale==0)
+        {
+            canDispararDer=false;
+            canDispararIzq=false;
+        }
+
+        if (canDispararIzq == true)
         {
             atacarIzq();
         }

@@ -6,11 +6,13 @@ using UnityEngine;
 
 public class DropItem : MonoBehaviour
 {
+    public bool meChoco;
     public List<GameObject> items;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("bullet"))
+        if (meChoco == false && collision.CompareTag("bullet"))
         {
+            meChoco = true;
             if (items.Count > 0)
             {
                 int index = UnityEngine.Random.Range(0, items.Count);
@@ -18,6 +20,8 @@ public class DropItem : MonoBehaviour
             }
             Destroy(gameObject);
             Destroy(collision.gameObject);
+            
         }
+        
     }
 }

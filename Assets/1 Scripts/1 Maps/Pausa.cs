@@ -23,27 +23,27 @@ public class Pausa : MonoBehaviour
     }
     public void unPausa()
     {
-        Time.timeScale = 1;
         canvasPausa.SetActive(false);
         canvasVic1.SetActive(false);
         canvasVic2.SetActive(false);
-        if(gano!=true){canvasGameplay.SetActive(true);}
+        if (gano != true) { canvasGameplay.SetActive(true); }
         inPausa = false;
+        Time.timeScale = 1;
     }
     public void quienGano()
     {
+        Time.timeScale = 0;
         inPausa = true;
         gano = true;
         canvasGameplay.SetActive(false);
         canvasVic1.SetActive(true);
-        Time.timeScale = 0;
     }
     public void quienGano2()
     {
+        Time.timeScale = 0;
         inPausa = true;
         gano = true;
         canvasGameplay.SetActive(false);
         canvasVic2.SetActive(true);
-        Time.timeScale = 0;
     }
 }

@@ -29,13 +29,18 @@ public class SceneManager : MonoBehaviour
 
     void OnSceneChanged(SceneM.Scene current, SceneM.Scene newScene)
     {
-        Debug.Log("Pene pal rosbolt");
+        Debug.Log("Cambio");
 
         m_cg.alpha = 1;
         StartCoroutine(Transition(m_cg));
     }
 
-    public void ChangeScene(string name) => StartCoroutine(Transition(m_cg, name));
+    public void ChangeScene(string name)
+    {
+        Debug.Log("Inicio la corrutina BUAAAJ");
+        StartCoroutine(Transition(m_cg, name));
+    }
+
     public void ExitGame() => Application.Quit();
 
     /// <summary>
@@ -45,10 +50,10 @@ public class SceneManager : MonoBehaviour
     {
         float initial = m_canvasG.alpha;
         float target = initial == 1 ? 0 : 1;
+        
+        //yield return new WaitForSeconds(initial == 0 ? timeBeforeTransition : 0);
 
-        yield return new WaitForSeconds(initial == 0 ? timeBeforeTransition : 0);
-
-        for (float i = 0; i < timeTransition; i += Time.deltaTime)
+        for (float i = 0; i < timeTransition; i += Time.unscaledDeltaTime)
         {
             float t = i / timeTransition;
             m_canvasG.alpha = Mathf.Lerp(initial, target, t);
@@ -64,5 +69,10 @@ public class SceneManager : MonoBehaviour
     /// <summary>
     /// Esta funci�n sirve para cargar una escena desde cualquier lugar.
     /// </summary>
-    void LoadScene(string nameScene) => SceneM.SceneManager.LoadScene(nameScene);
+    void LoadScene(string nameScene)
+    {
+        Time.timeScale = 1;
+        SceneM.SceneManager.LoadScene(nameScene);
+    }
+
 }

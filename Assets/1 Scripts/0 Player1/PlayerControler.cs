@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEditor.PackageManager;
 using UnityEngine;
 public class PlayerControler : MonoBehaviour
@@ -9,10 +10,12 @@ public class PlayerControler : MonoBehaviour
     public float velmov;
     public float velrot;
     public GameObject ganador;
+    public TMP_Text vida; // 
     void Update()
     {
         Mira();
         Oruga();
+        vida.text = hp.ToString();
     }
     public void tomarDaño(float daño)
     {
