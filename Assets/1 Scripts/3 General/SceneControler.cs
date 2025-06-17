@@ -17,9 +17,10 @@ public class SceneControler : MonoBehaviour
             DontDestroyOnLoad(this.gameObject); 
         } 
     }
-    public void CargarEscena(int escena) 
+    
+    public void CargarEscena(string escena)
     {
-        SceneManager.LoadScene(escena);
+        SceneManager.Instance.ChangeScene(escena);
     }
     public void ExitGame()
     {

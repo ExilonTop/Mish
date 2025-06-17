@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Aviso : MonoBehaviour
 {
-    public int sceneToload;
+    public string sceneToload;
     public void Click()
     {
         SceneControler.Instance.CargarEscena(sceneToload);
