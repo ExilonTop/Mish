@@ -1,12 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-public enum WeaponType
-{
-    None,
-    Weapon1,
-    Weapon2
-}
+
 public class Disparar : MonoBehaviour
 {
     public float player;
@@ -17,11 +12,11 @@ public class Disparar : MonoBehaviour
     public float delayDer = 0;
     public float timerDer = 0f;
     [Header("ArmasIzq")]
-    public WeaponType currentWeaponIzq;
+    public WeaponData currentWeaponIzq;
     public Transform armaizq;
     public List<Bala> armasIzq = new List<Bala>();
     [Header("ArmaDer")]
-    public WeaponType currentWeaponDer;
+    public WeaponData currentWeaponDer;
     public Transform armader;
     public List<Bala> armasDer = new List<Bala>();
     private void Update()
@@ -127,20 +122,14 @@ public class Disparar : MonoBehaviour
                 break;
         }
     }*/
-    public void DispararGeneric(WeaponType brazo, List<Bala> balas, Transform spawnPoint)
+    public void DispararGeneric(WeaponData weaponData, List<Bala> balas, Transform spawnPoint)
     {
-        switch (brazo)
+        if (weaponData.bulletIndex >= 0 && weaponData.bulletIndex < balas.Count)
         {
-            case WeaponType.None:
-                break;
-            case WeaponType.Weapon1:
-                Bala bala = Instantiate(balas[0], spawnPoint.position, spawnPoint.rotation);
-                bala.Shoot();
-                break;
-            case WeaponType.Weapon2:
-                Bala bala2 = Instantiate(balas[1], spawnPoint.position, spawnPoint.rotation);
-                bala2.Shoot();
-                break;
+            Bala bala = Instantiate(balas[weaponData.bulletIndex], spawnPoint.position, spawnPoint.rotation);
+            bala.Shoot();
         }
+        
+    
     }
 }

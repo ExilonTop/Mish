@@ -6,9 +6,9 @@ using UnityEngine;
 public class WeaponData
 {
     public string nombre;
-    public WeaponType type;
-    public bool isLeft;
+    public bool isLeft; // Es el que verifica en que brazo va
     public float delay;
+    public int bulletIndex;
 }
 [Serializable]
 public class BrazoRef
@@ -38,14 +38,14 @@ public class Armas : MonoBehaviour
         {
             if (data.isLeft)
             {
-                obj.delayIzq= data.delay;
+                obj.delayIzq = data.delay;
                 foreach (BrazoRef brazo in brazosIzq)
                 {
                     brazo.obj.SetActive(false);
                 }
                 BrazoRef brazoMatch = brazosIzq.FirstOrDefault<BrazoRef>(arm => arm.nombre == tag);
                 brazoMatch.obj.SetActive(true);
-                obj.currentWeaponIzq = data.type;
+                obj.currentWeaponIzq = data;
             }
             else
             {
@@ -56,32 +56,9 @@ public class Armas : MonoBehaviour
                 }
                 BrazoRef brazoMatch = brazosDer.FirstOrDefault<BrazoRef>(arm => arm.nombre == tag);
                 brazoMatch.obj.SetActive(true);
-                obj.currentWeaponDer= data.type;
+                obj.currentWeaponDer = data;
             }
         }   
-        /*if (collision.CompareTag("escopeta"))
-        {
-            obj.currentWeaponIzq = WeaponType.Weapon2;
-            izqLaser.SetActive(false);
-            izqEscopeta.SetActive(true);
-        }
-        if (collision.CompareTag("laser"))
-        {
-            obj.currentWeaponIzq = WeaponType.Weapon1;
-            izqEscopeta.SetActive(false);
-            izqLaser.SetActive(true);
-        }
-        if (collision.CompareTag("cañon"))
-        {
-            obj.currentWeaponDer = WeaponType.Weapon1;
-            derFranco.SetActive(false);
-            derCañon.SetActive(true);
-        }
-        if (collision.CompareTag("franco"))
-        {
-            obj.currentWeaponDer = WeaponType.Weapon2;
-            derFranco.SetActive(true);
-            derCañon.SetActive(false);
-        }*/
+        
     }
 }
