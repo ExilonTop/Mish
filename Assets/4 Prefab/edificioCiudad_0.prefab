@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4472551417298649334}
   - component: {fileID: 5870573585001694405}
-  - component: {fileID: 6556659517092004494}
   - component: {fileID: 550058546347554824}
   - component: {fileID: 5838467072284392962}
+  - component: {fileID: 6556659517092004494}
   m_Layer: 0
   m_Name: edificioCiudad_0
   m_TagString: Untagged
@@ -90,18 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6556659517092004494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9119108407776983104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6372130841ab16c438095688e80ed68c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &550058546347554824
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -175,3 +163,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &6556659517092004494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9119108407776983104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6372130841ab16c438095688e80ed68c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
