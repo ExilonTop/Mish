@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 286054593772589566, guid: e4f95618ab128ed4f8aa2e21ab02d3af, type: 3}
+    - target: {fileID: 3877114968346666815, guid: dcd9ae81ad72fb244a10068821c28995, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8046112504840496032, guid: dcd9ae81ad72fb244a10068821c28995, type: 3}
       propertyPath: m_Name
       value: EdificioCiudad2 Variant
