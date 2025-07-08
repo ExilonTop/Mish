@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a35178998bea6de4387ff0e4bb90119c
+guid: 9ab684a0f052b63488cd7974a65f44d1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7113563777239113377
-    second: edificioCiudad4_0
+      213: 602840317946776241
+    second: edificioCiudad_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: edificioCiudad4_0
+      name: edificioCiudad_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 1
         y: 0
-        width: 114
-        height: 208
+        width: 99
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ae5c6de09478b260800000000000000
-      internalID: 7113563777239113377
+      spriteID: 1ba408f3318bd5800800000000000000
+      internalID: 602840317946776241
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f90ee61afd28bec40aa52200c96222f4
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      edificioCiudad4_0: 7113563777239113377
+      edificioCiudad_0: 602840317946776241
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

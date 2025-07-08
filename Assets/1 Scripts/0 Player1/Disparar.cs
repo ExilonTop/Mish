@@ -94,34 +94,6 @@ public class Disparar : MonoBehaviour
             canDispararDer = false;
         }
     }
-    /*public void DispararIzq()
-    {
-        switch (currentWeaponIzq)
-        {
-            case WeaponType.None:
-                break;
-            case WeaponType.Weapon1:
-                Instantiate(armasIzq[0], armaizq.position, armaizq.rotation);
-                break;
-            case WeaponType.Weapon2:
-                Instantiate(armasIzq[1], armaizq.position, armaizq.rotation);
-                break;
-        }
-    }
-    public void DispararDer()
-    {
-        switch (currentWeaponDer) //
-        {
-            case WeaponType.None:
-                break;
-            case WeaponType.Weapon1:
-                Instantiate(armasDer[0], armader.position, armader.rotation);
-                break;
-            case WeaponType.Weapon2:
-                Instantiate(armasDer[1], armader.position, armader.rotation);
-                break;
-        }
-    }*/
     public void DispararGeneric(WeaponData weaponData, List<Bala> balas, Transform spawnPoint)
     {
         if (weaponData.bulletIndex >= 0 && weaponData.bulletIndex < balas.Count)

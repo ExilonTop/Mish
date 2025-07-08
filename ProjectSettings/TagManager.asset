@@ -49,5 +49,17 @@ TagManager:
   - name: Background
     uniqueID: 2553636163
     locked: 0
+  - name: Mundo
+    uniqueID: 2492218893
+    locked: 0
+  - name: Items
+    uniqueID: 321115523
+    locked: 0
+  - name: Bala
+    uniqueID: 1246344933
+    locked: 0
+  - name: Player
+    uniqueID: 349365859
+    locked: 0
   m_RenderingLayers:
   - Default
