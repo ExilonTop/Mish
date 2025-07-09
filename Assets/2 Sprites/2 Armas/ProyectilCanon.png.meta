@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 28aa81463d15f4f4181315d3fe74ddaf
+guid: 01c3ee95ffc7c164f90b8b32518a9425
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8480622078083816098
-    second: BalaEscopeta-Sheet_0
-  - first:
-      213: -3098477779485733682
-    second: BalaEscopeta-Sheet_1
-  - first:
-      213: 2370392766964798257
-    second: BalaEscopeta-Sheet_2
-  - first:
-      213: -8485432805820551121
-    second: BalaEscopeta-Sheet_3
+      213: -6027052909063773771
+    second: ProyectilCanon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,67 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BalaEscopeta-Sheet_0
+      name: ProyectilCanon_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 4
         y: 0
-        width: 31
-        height: 64
+        width: 24
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2aa558609d831b570800000000000000
-      internalID: 8480622078083816098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BalaEscopeta-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 0
-        width: 31
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1339715a9a355e020800000000000000
-      internalID: 2370392766964798257
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BalaEscopeta-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 0
-        width: 31
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f20be9322dfad3a80800000000000000
-      internalID: -8485432805820551121
+      spriteID: 5b1e4c8df4b9b5ca0800000000000000
+      internalID: -6027052909063773771
       vertices: []
       indices: 
       edges: []
@@ -191,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a7a924db9161e1c4ba69997a11757da3
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -201,10 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BalaEscopeta-Sheet_0: 8480622078083816098
-      BalaEscopeta-Sheet_1: -3098477779485733682
-      BalaEscopeta-Sheet_2: 2370392766964798257
-      BalaEscopeta-Sheet_3: -8485432805820551121
+      ProyectilCanon_0: -6027052909063773771
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
