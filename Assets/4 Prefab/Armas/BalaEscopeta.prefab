@@ -142,7 +142,7 @@ MonoBehaviour:
   "da\xF1o": 250
   velocidad: 6.5
   timeLife: 0
-  timeDead: 0.5
+  timeDead: 0.7
 --- !u!95 &8630214476562421608
 Animator:
   serializedVersion: 7

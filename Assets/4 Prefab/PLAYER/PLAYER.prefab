@@ -433,7 +433,7 @@ MonoBehaviour:
     bulletIndex: 1
   - nombre: Pistol
     isLeft: 1
-    delay: 1.5
+    delay: 0.3
     bulletIndex: 2
   - nombre: "ca\xF1on"
     isLeft: 0
@@ -445,7 +445,7 @@ MonoBehaviour:
     bulletIndex: 1
   - nombre: Pistol2
     isLeft: 0
-    delay: 1.5
+    delay: 0.3
     bulletIndex: 2
   brazosIzq:
   - nombre: laser

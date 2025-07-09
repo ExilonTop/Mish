@@ -139,6 +139,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "da\xF1o": 300
-  velocidad: 10
+  velocidad: 15
   timeLife: 0
-  timeDead: 0.9
+  timeDead: 12

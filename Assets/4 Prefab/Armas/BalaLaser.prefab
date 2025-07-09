@@ -141,4 +141,4 @@ MonoBehaviour:
   "da\xF1o": 1
   velocidad: 8
   timeLife: 0
-  timeDead: 0.3
+  timeDead: 0.5
