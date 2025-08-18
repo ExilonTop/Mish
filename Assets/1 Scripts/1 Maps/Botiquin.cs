@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class Botiquin : MonoBehaviour
 {
     public float vida;

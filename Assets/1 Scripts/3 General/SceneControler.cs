@@ -1,6 +1,4 @@
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 public class SceneControler : MonoBehaviour
 {
     public static SceneControler Instance { get; private set; }
@@ -17,7 +15,6 @@ public class SceneControler : MonoBehaviour
             DontDestroyOnLoad(this.gameObject); 
         } 
     }
-    
     public void CargarEscena(string escena)
     {
         SceneManager.Instance.ChangeScene(escena);

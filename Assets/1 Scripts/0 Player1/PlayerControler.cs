@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 public class PlayerControler : MonoBehaviour
@@ -9,7 +8,7 @@ public class PlayerControler : MonoBehaviour
     public float velmov;
     public float velrot;
     public GameObject ganador;
-    public TMP_Text vida; // 
+    public TMP_Text vida; 
     void Update()
     {
         Mira();

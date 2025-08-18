@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
 public class Disparar : MonoBehaviour
@@ -35,13 +34,11 @@ public class Disparar : MonoBehaviour
         {
             if (timerIzq >= delayIzq)
             {
-                //Hacemos algo
                 canDispararIzq = true;
                 timerIzq = 0f;
             }
             else
             {
-                //echa a andar el reloj
                 timerIzq += Time.deltaTime;
             }
         }
@@ -53,13 +50,11 @@ public class Disparar : MonoBehaviour
         {
             if (timerDer >= delayDer)
             {
-                //Hacemos algo
                 canDispararDer = true;
                 timerDer = 0f;
             }
             else
             {
-                //echa a andar el reloj
                 timerDer += Time.deltaTime;
             }
         }
@@ -68,13 +63,11 @@ public class Disparar : MonoBehaviour
     {
         if (player == 1 && Input.GetButton("FireQ"))
         {
-            //DispararIzq();
             DispararGeneric(currentWeaponIzq, armasIzq, armaizq);
             canDispararIzq = false;
         }
         if (player == 2 && Input.GetButton("Fire1"))
         {
-            //DispararIzq();
             DispararGeneric(currentWeaponIzq, armasIzq, armaizq);
             canDispararIzq = false;
         }
@@ -83,13 +76,11 @@ public class Disparar : MonoBehaviour
     {
         if (player == 1 && Input.GetButton("FireE"))
         {
-            //DispararDer();
             DispararGeneric(currentWeaponDer, armasDer, armader);
             canDispararDer = false;
         }
         if (player == 2 && Input.GetButton("Fire2"))
         {
-            //DispararDer();
             DispararGeneric(currentWeaponDer, armasDer, armader);
             canDispararDer = false;
         }
@@ -101,7 +92,5 @@ public class Disparar : MonoBehaviour
             Bala bala = Instantiate(balas[weaponData.bulletIndex], spawnPoint.position, spawnPoint.rotation);
             bala.Shoot();
         }
-        
-    
     }
 }

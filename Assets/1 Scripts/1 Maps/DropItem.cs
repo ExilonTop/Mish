@@ -1,9 +1,6 @@
-using System;
 using System.Collections.Generic;
 using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
-
 public class DropItem : MonoBehaviour
 {
     public bool meChoco;
@@ -20,8 +17,6 @@ public class DropItem : MonoBehaviour
             }
             Destroy(gameObject);
             Destroy(collision.gameObject);
-            
         }
-        
     }
 }

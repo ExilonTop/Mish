@@ -7,8 +7,8 @@ public class WeaponData
 {
     public string nombre;
     public bool isLeft; // Es el que verifica en que brazo va
-    public float delay;
-    public int bulletIndex;
+    public float delay; //Cadencia de tiro
+    public int bulletIndex; //Posicion de la bala
 }
 [Serializable]
 public class BrazoRef
@@ -22,10 +22,6 @@ public class Armas : MonoBehaviour
     public List<WeaponData> armasData = new List<WeaponData>();
     public List<BrazoRef> brazosIzq = new List<BrazoRef>();
     public List<BrazoRef> brazosDer = new List<BrazoRef>();
-    //public GameObject izqLaser;
-    //public GameObject izqEscopeta;
-    //public GameObject derCañon;
-    //public GameObject derFranco;
     public void Start()
     {
         obj = transform.GetComponent<Disparar>();

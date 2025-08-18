@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 public class Aviso : MonoBehaviour
 {
     public string sceneToload;

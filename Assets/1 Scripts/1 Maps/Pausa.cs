@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class Pausa : MonoBehaviour
 {
     public GameObject canvasPausa;
