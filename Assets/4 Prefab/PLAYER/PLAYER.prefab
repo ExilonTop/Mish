@@ -118,8 +118,8 @@ Transform:
   m_Children:
   - {fileID: 6253439636416437406}
   - {fileID: 3303018164142488759}
-  - {fileID: 5280471146290995932}
   - {fileID: 2025172066406551574}
+  - {fileID: 5443503823439551250}
   m_Father: {fileID: 145500742244060967}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2060556445585018394
@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 5443503823439551250}
   - component: {fileID: 6761085469935339588}
   m_Layer: 7
-  m_Name: "Ca\xF1on2"
+  m_Name: "Ca\xF1on1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,11 +179,11 @@ Transform:
   m_GameObject: {fileID: 2294134165898852192}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.65, y: 0.62, z: 0}
+  m_LocalPosition: {x: -0.65, y: 0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1562761971901888269}
+  m_Father: {fileID: 7620272837384254893}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6761085469935339588
 SpriteRenderer:
@@ -231,7 +231,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 4711374544223704480, guid: 7f6488b71af9aab499d515585495efe7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -323,7 +323,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.75, y: 1}
   m_EdgeRadius: 0
 --- !u!50 &7257512526116678821
 Rigidbody2D:
@@ -398,8 +398,8 @@ MonoBehaviour:
   armaizq: {fileID: 6253439636416437406}
   armasIzq:
   - {fileID: 917955529191161755, guid: 68914760470ac30448f0c356e5507c6f, type: 3}
-  - {fileID: 1544851673105760425, guid: 1f9a6d1f51303a543bc1d9cd5ad651d6, type: 3}
   - {fileID: 3151862249101789399, guid: 6f116ffe27de6794da14d501518834d7, type: 3}
+  - {fileID: 7702992250427923953, guid: 41a4394136300f249aa344917d46f2a3, type: 3}
   currentWeaponDer:
     nombre: Pistol2
     isLeft: 0
@@ -408,8 +408,8 @@ MonoBehaviour:
   armader: {fileID: 1676641045403641567}
   armasDer:
   - {fileID: 917955529191161755, guid: 68914760470ac30448f0c356e5507c6f, type: 3}
-  - {fileID: 7702992250427923953, guid: 41a4394136300f249aa344917d46f2a3, type: 3}
   - {fileID: -3235776283478159593, guid: f3738b390ddba064f8cd1bc892c2b01f, type: 3}
+  - {fileID: 1544851673105760425, guid: 1f9a6d1f51303a543bc1d9cd5ad651d6, type: 3}
 --- !u!114 &1751649942260299234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,40 +427,40 @@ MonoBehaviour:
     isLeft: 1
     delay: 0.3
     bulletIndex: 0
-  - nombre: laser
-    isLeft: 1
-    delay: 0
-    bulletIndex: 1
   - nombre: escopeta
     isLeft: 1
     delay: 1
+    bulletIndex: 1
+  - nombre: "ca\xF1on"
+    isLeft: 1
+    delay: 0.5
     bulletIndex: 2
   - nombre: Pistol2
     isLeft: 0
     delay: 0.3
     bulletIndex: 0
-  - nombre: "ca\xF1on"
-    isLeft: 0
-    delay: 0.5
-    bulletIndex: 1
   - nombre: franco
     isLeft: 0
     delay: 1.5
+    bulletIndex: 1
+  - nombre: laser
+    isLeft: 0
+    delay: 0
     bulletIndex: 2
   brazosIzq:
   - nombre: Pistol
     obj: {fileID: 4450773342649942280}
-  - nombre: laser
-    obj: {fileID: 3933265235114370282}
   - nombre: escopeta
     obj: {fileID: 1694020522569697182}
+  - nombre: "ca\xF1on"
+    obj: {fileID: 2294134165898852192}
   brazosDer:
   - nombre: Pistol2
     obj: {fileID: 6464629476880934380}
-  - nombre: "ca\xF1on"
-    obj: {fileID: 2294134165898852192}
   - nombre: franco
     obj: {fileID: 5853291873426771980}
+  - nombre: laser
+    obj: {fileID: 3933265235114370282}
 --- !u!1 &3933265235114370282
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 5280471146290995932}
   - component: {fileID: 5858500250276669895}
   m_Layer: 7
-  m_Name: Laser1
+  m_Name: Laser2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -487,11 +487,11 @@ Transform:
   m_GameObject: {fileID: 3933265235114370282}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.48, y: 0.85, z: 0}
+  m_LocalPosition: {x: 0.45, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7620272837384254893}
+  m_Father: {fileID: 1562761971901888269}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5858500250276669895
 SpriteRenderer:
@@ -539,7 +539,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 9082429109045791810, guid: e772cc1b5d5bfdd4fbee676db9b42708, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -960,8 +960,8 @@ Transform:
   m_Children:
   - {fileID: 1676641045403641567}
   - {fileID: 4140342182320212485}
-  - {fileID: 5443503823439551250}
   - {fileID: 2232563132807470308}
+  - {fileID: 5280471146290995932}
   m_Father: {fileID: 145500742244060967}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8568947527352240678

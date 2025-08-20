@@ -52,7 +52,7 @@ MonoBehaviour:
   "da\xF1o": 0
   velocidad: 0
   timeLife: 0
-  timeDead: 0.5
+  timeDead: 0.7
 --- !u!1001 &267021059090974327
 PrefabInstance:
   m_ObjectHideFlags: 0
